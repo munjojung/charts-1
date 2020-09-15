@@ -130,6 +130,7 @@ postgresqlUsername: postgres
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#setting-the-root-password-on-first-run
 ##
 # postgresqlPassword:
+postgresqlPassword: postgres
 
 ## PostgreSQL password using existing secret
 ## existingSecret: secret
@@ -322,6 +323,8 @@ persistence:
   subPath: ''
 
   # storageClass: "-"
+  storageClass:
+    - manual
   accessModes:
     - ReadWriteOnce
   size: 8Gi
