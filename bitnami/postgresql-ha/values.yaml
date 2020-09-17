@@ -529,7 +529,8 @@ ldap:
 ## Init Container paramaters
 ##
 volumePermissions:
-  enabled: false
+  #enabled: false
+  enabled: true
   ## K8s Security Context
   ## https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ##
@@ -646,6 +647,8 @@ persistence:
   ## set, choosing the default provisioner.
   ##
   # storageClass: "-"
+  storageClass:
+    - manual
   ## The path the volume will be mounted at, useful when using different
   ## PostgreSQL images.
   ##
